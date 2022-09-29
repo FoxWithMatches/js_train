@@ -87,7 +87,8 @@ h1, h2,h3, h4, h5, h6 {
     z-index: 1000;
 }
 
-.header.fixted {
+.header.fixed {
+    padding: 10px 0;
     background-color: #f38181;
     position: fixed;
     top: 0;
@@ -179,6 +180,10 @@ h1, h2,h3, h4, h5, h6 {
     color: transparent;
 
     padding: 10px 0;
+}
+
+.nav-toggle:focus {
+    outline: 0;
 }
 
 .nav-toggle-item {
@@ -630,11 +635,15 @@ h1, h2,h3, h4, h5, h6 {
 /* Reviews */
 
 .reviews {
-    padding: 0 110px;
     position: relative;
 }
 
+.reviews .slick-slider {
+    padding: 0 110px;
+}
+
 .reviews-item {
+    min-height: 210px;
     padding-left: 250px;
     position: relative;
 }
@@ -674,26 +683,36 @@ h1, h2,h3, h4, h5, h6 {
     background-color: #f38181;
 }
 
-.reviews-btn {
+.slick-arrow {
+    display: block;
     font-size: 0;
     color: transparent;
+
+    border: 0;
+    background: 0;
+    cursor: pointer;
+
     position: absolute;
     top: 50%;
     z-index: 1;
     transform: translateY(-50%);
 }
 
-.reviews-btn--prev {
+.slick-arrow:focus {
+    outline: 0;
+}
+
+.slick-prev {
     left: 0;
     transform: rotate(-45deg);
 }
 
-.reviews-btn--next {
+.slick-next {
     right: 0;
     transform: rotate(135deg);
 }
 
-.reviews-btn:after {
+.slick-arrow:after {
     content: "";
     display: block;
     width: 16px;
@@ -1267,7 +1286,7 @@ h1, h2,h3, h4, h5, h6 {
 
     /* reviews */
 
-    .reviews {
+    .reviews .slick-slider {
         padding: 0 60px;
     }
 
@@ -1344,6 +1363,10 @@ h1, h2,h3, h4, h5, h6 {
         top: 100%;
         left: 0;
         background-color: #f38181;
+    }
+
+    .nav.active {
+        display: block;
     }
 
     .nav__link {
@@ -1541,11 +1564,11 @@ h1, h2,h3, h4, h5, h6 {
 
     /* reviews */
 
-    .reviews {
+    .reviews .slick-slider{
         padding: 0;
     }
 
-    .reviews-btn {
+    .slick-arrow {
         top: 18%;
     }
 

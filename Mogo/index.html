@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
@@ -17,18 +18,18 @@
 </head>
 <body>
 
-<header class="header">
+<header class="header" id="header">
     <div class="container">
         <div class="header__inner">
-            <div class="header__logo">MoGo</div>
+            <div class="header__logo" data-scroll="#intro">MoGo</div>
 
-            <nav class="nav">
-                <a href="#" class="nav__link active">About</a>
-                <a href="#" class="nav__link">Service</a>
-                <a href="#" class="nav__link">Blog</a>
-                <a href="#" class="nav__link">Work</a>
-                <a href="#" class="nav__link">Contacts</a>
-                <a href="#" class="nav__link">
+            <nav class="nav" id="nav">
+                <a href="#" class="nav__link" data-scroll="#about">About</a>
+                <a href="#" class="nav__link" data-scroll="#services">Service</a>
+                <a href="#" class="nav__link" data-scroll="#blog">Blog</a>
+                <a href="#" class="nav__link" data-scroll="#works">Work</a>
+                <a href="#" class="nav__link" data-scroll="#footer">Contacts</a>
+                <a href="#" class="nav__link" data-scroll="#">
                     <i class="fa-solid fa-cart-shopping"></i>
                 </a>
                 <a href="#" class="nav__link">
@@ -36,7 +37,7 @@
                 </a>
             </nav>
 
-            <button class="nav-toggle" type="button">
+            <button class="nav-toggle" id="nav_toggle" type="button">
                 <span  class="nav-toggle-item">menu</span>
             </button>
         </div>
@@ -45,7 +46,8 @@
 
 <div class="page">
 
-    <div class="intro">
+<!--intro-->
+    <div class="intro" id="intro">
         <div class="container">
             <div class="intro__inner">
                 <h2 class="intro__suptitle">Creative Template</h2>
@@ -75,7 +77,8 @@
         </div>
     </div>
 
-    <section class="section">
+<!--about-->
+    <section class="section" id="about">
         <div class="container">
             <div class="section-header">
                 <h3 class="section-suptitle">Whats we do</h3>
@@ -142,7 +145,8 @@
         </div>
     </div>
 
-<section class="section">
+<!--services-->
+<section class="section" id="services">
     <div class="container">
 
         <div class="section-header">
@@ -186,6 +190,7 @@
     </div>
 </section>
 
+<!--devices-->
 <section class="section section--devices">
     <div class="container">
         <div class="section-header">
@@ -200,6 +205,7 @@
     </div>
 </section>
 
+<!--wedo-->
 <section class="section">
     <div class="container">
         <div class="section-header">
@@ -216,28 +222,28 @@
             </div>
             <div class="wedo-item">
                 <div class="accordion">
-                    <div class="accordion-item">
+                    <div class="accordion-item" data-collapse="#wedo_1">
                         <div class="accordion-header">
                             <img class="accordion-icon" src="/Mogo/assets/img/wedo/img.png" alt="image">
                             <div class="accordion-title">Photography</div>
                         </div>
-                        <div class="accordion-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis consequatur eligendi quas consequuntur ipsum, ipsa, placeat adipisci aliquam eum veritatis ad ea consectetur maiores! Quia labore odio blanditiis aspernatur tempore?</div>
+                        <div class="accordion-content" id="wedo_1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis consequatur eligendi quas consequuntur ipsum, ipsa, placeat adipisci aliquam eum veritatis ad ea consectetur maiores! Quia labore odio blanditiis aspernatur tempore?</div>
                     </div>
 
-                    <div class="accordion-item active">
+                    <div class="accordion-item active" data-collapse="#wedo_2">
                         <div class="accordion-header">
                             <img class="accordion-icon" src="/Mogo/assets/img/wedo/EQUALIZER.png" alt="image">
                             <div class="accordion-title">creativity</div>
                         </div>
-                        <div class="accordion-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis consequatur eligendi quas consequuntur ipsum, ipsa, placeat adipisci aliquam eum veritatis ad ea consectetur maiores! Quia labore odio blanditiis aspernatur tempore?</div>
+                        <div class="accordion-content" id="wedo_2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis consequatur eligendi quas consequuntur ipsum, ipsa, placeat adipisci aliquam eum veritatis ad ea consectetur maiores! Quia labore odio blanditiis aspernatur tempore?</div>
                     </div>
 
-                    <div class="accordion-item">
+                    <div class="accordion-item" data-collapse="#wedo_3">
                         <div class="accordion-header">
                             <img class="accordion-icon" src="/Mogo/assets/img/wedo/BULLSEYE.png" alt="image">
                             <div class="accordion-title">web design</div>
                         </div>
-                        <div class="accordion-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis consequatur eligendi quas consequuntur ipsum, ipsa, placeat adipisci aliquam eum veritatis ad ea consectetur maiores! Quia labore odio blanditiis aspernatur tempore?</div>
+                        <div class="accordion-content" id="wedo_3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis consequatur eligendi quas consequuntur ipsum, ipsa, placeat adipisci aliquam eum veritatis ad ea consectetur maiores! Quia labore odio blanditiis aspernatur tempore?</div>
                     </div>
                 </div> <!-- accordion-->
             </div> <!-- wedo-item-->
@@ -245,23 +251,36 @@
     </div> <!-- container-->
 </section>
 
+<!--reviews1-->
 <div class="section section--gray">
     <div class="container">
 
         <div class="reviews">
-            <a class="reviews-btn reviews-btn--prev" href="#">Prev</a>
-            <a class="reviews-btn reviews-btn--next" href="#">Next</a>
 
-            <div class="reviews-item">
-                <img class="reviews-photo" src="/Mogo/assets/img/ava.png" alt="image">
-                <div class="reviews-text">"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit veniam, nam, et aut neque laboriosam maxime error iure doloribus, vitae commodi voluptates officiis autem distinctio dolor expedita id saepe quidem."</div>
-                <div class="reviews-author">John Doe</div>
+            <div data-slider>
+                <div>
+                    <div class="reviews-item">
+                        <img class="reviews-photo" src="/Mogo/assets/img/ava.png" alt="image">
+                        <div class="reviews-text">"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit veniam, nam, et aut neque laboriosam maxime error iure doloribus, vitae commodi voluptates officiis autem distinctio dolor expedita id saepe quidem."</div>
+                        <div class="reviews-author">John Doe</div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="reviews-item">
+                        <img class="reviews-photo" src="/Mogo/assets/img/ava.png" alt="image">
+                        <div class="reviews-text">"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit veniam, nam, et aut neque laboriosam maxime error iure doloribus, vitae commodi voluptates officiis autem distinctio dolor expedita id saepe quidem."</div>
+                        <div class="reviews-author">John Doe</div>
+                    </div>
+                </div>
             </div>
+
         </div>
 
     </div>
 </div>
 
+<!--team-->
 <section class="section">
     <div class="container">
         <div class="section-header">
@@ -351,6 +370,7 @@
     </div> <!--container-->
 </section>
 
+<!--logos-->
 <div class="section section--gray">
     <div class="container">
         <div class="logos">
@@ -370,7 +390,8 @@
     </div>
 </div>
 
-<section class="section">
+<!--works-->
+<section class="section" id="works">
     <div class="container">
         <div class="section-header">
             <h3 class="section-suptitle">What we do</h3>
@@ -443,22 +464,35 @@
     </div> <!--works-->
 </section>
 
+
+<!--reviews2-->
 <div class="section">
     <div class="container">
 
         <div class="reviews">
-            <a class="reviews-btn reviews-btn--prev" href="#">Prev</a>
-            <a class="reviews-btn reviews-btn--next" href="#">Next</a>
 
-            <div class="reviews-item">
-                <img class="reviews-photo" src="/Mogo/assets/img/ava.png" alt="image">
-                <div class="reviews-text">"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit veniam, nam, et aut neque laboriosam maxime error iure doloribus, vitae commodi voluptates officiis autem distinctio dolor expedita id saepe quidem."</div>
-                <div class="reviews-author">John Doe</div>
+            <div data-slider>
+                <div>
+                    <div class="reviews-item">
+                        <img class="reviews-photo" src="/Mogo/assets/img/ava.png" alt="image">
+                        <div class="reviews-text">"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit veniam, nam, et aut neque laboriosam maxime error iure doloribus, vitae commodi voluptates officiis autem distinctio dolor expedita id saepe quidem."</div>
+                        <div class="reviews-author">John Doe</div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="reviews-item">
+                        <img class="reviews-photo" src="/Mogo/assets/img/ava.png" alt="image">
+                        <div class="reviews-text">"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit veniam, nam, et aut neque laboriosam maxime error iure doloribus, vitae commodi voluptates officiis autem distinctio dolor expedita id saepe quidem."</div>
+                        <div class="reviews-author">John Doe</div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
+<!--clients-->
 <section class="section section--clients">
     <div class="container">
         <div class="section-header">
@@ -509,7 +543,9 @@
     </div>
 </section>
 
-<section class="section">
+
+<!--blog-->
+<section class="section" id="blog">
     <div class="container">
         <div class="section-header">
             <h3 class="section-suptitle">Our stories</h3>
@@ -601,6 +637,7 @@
     </div>
 </section>
 
+<!--map-->
 <section class="section section--map">
     <div class="container">
         <div class="map">
@@ -614,7 +651,8 @@
     </div>
 </section>
 
-<footer class="footer">
+<!--footer-->
+<footer class="footer" id="footer">
     <div class="container">
         <div class="footer-inner">
             <div class="footer-col footer-col--first">
@@ -715,5 +753,8 @@
 
 </div> <!--page-->
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="/Mogo/assets/js/app.js"></script>
 </body>
 </html>
