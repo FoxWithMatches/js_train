@@ -410,14 +410,14 @@
     </div><!--modal__dialog-->
 </div><!--modal-->
 
-<div class="modal">
+<div class="modal" style="display: none;">
     <div class="modal__dialog">
 
         <button class="modal__close" type="button">
             <img src="image/close.svg" alt="">
         </button>
 
-            <div class="modal__content">
+            <div class="modal__content text-center">
                 <h2 class="modal__title">Resume</h2>
             
 
@@ -546,8 +546,52 @@
                 <a class="btn" href="#">hire me</a>
             </div>
         </div><!--model content-->
+</div><!--modal-dialog-->
 </div><!--modal-->
-</div>
+
+<div class="modal" style="display: none;">
+    <div class="modal__dialog modal__dialog--sm">
+
+        <button class="modal__close" type="button">
+            <img src="image/close.svg" alt="">
+        </button>
+
+                <div class="contact">
+                    <div class="contact__left">
+                        <h2 class="modal__title mb-0">let's talk</h2>
+                        <div class="modal__subtitle">call me or send me a request</div>
+                        <ul class="contact__info">
+                            <li class="contact__info-item">
+                                <img class="contact__info-icon" src="image/mobile-phone.svg" width="10px" alt="">
+                                8 831 47 5555 555</li>
+                            <li class="contact__info-item">
+                                <img class="contact__info-icon" src="image/emailIcon.svg" width="10px" alt="">
+                                designer@mail.ru</li>
+                        </ul>
+
+                        <form class="form" action="/" method="post">
+                            <div class="form__group">
+                                <label class="label" for="input-email">Адрес e-mail</label>
+                                <input id="input-email" name="input-email" type="text" class="input" placeholder="Адрес e-mail">
+                            </div>
+
+                            <div class="form__group">
+                                <label class="label" for="input-text">Request</label>
+                                <textarea name="input-text" id="input-text" class="textarea" placeholder="Type your request"></textarea>
+                            </div>
+
+                            <div class="text-right">
+                                <button class="btn" type="button">send</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="contact__right"></div>
+                </div>
+
+
+    </div><!--modal-dialog-->
+</div><!--modal-->
 
 </body>
 </html>
