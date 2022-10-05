@@ -1,5 +1,7 @@
 $(function() {
 
+    const worksSlider = $('[data-slider="slick"]');
+
     // filter
 
     let filter = $("[data-filter]");
@@ -43,6 +45,8 @@ $(function() {
                 transform: "scale(1)"
             });
         }, 200);
+
+        worksSlider.slick("setPosition");
     });
 
     modalClose.on("click", function(event) {
@@ -81,4 +85,32 @@ $(function() {
 
         event.stopPropagation();
     });
+
+    // Slider
+
+worksSlider.slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    fade: true,
+    arrows: false,
+    dots: true
+  });
+
+  $(".slickPrev").on("click", function(event) {
+    event.preventDefault();
+
+    let currentSlider = $(this).parents('.modal').find('[data-slider="slick"]');
+
+    currentSlider.slick("slickPrev");
+});
+
+$(".slickNext").on("click", function(event) {
+    event.preventDefault();
+
+    let currentSlider = $(this).parents('.modal').find('[data-slider="slick"]');
+
+    currentSlider.slick("slickNext");
+});
+
 });
