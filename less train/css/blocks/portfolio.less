@@ -3,10 +3,22 @@
 .portfolio {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 -1rem 2.8rem 0;
+    margin: 0 -1rem 2.8rem -1rem;
+
+    @media @tablet {
+        flex-basis: 50%;
+    }
 }
 
 .portfolio__col {
     flex-basis: 33.33333%;
     padding: 1rem;
+
+    @media @tablet {
+        flex-basis: 50%;
+    }
+
+    @media @mobile {
+        flex-basis: 100%;
+    }
 }

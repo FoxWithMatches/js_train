@@ -8,6 +8,10 @@
     display: flex;
     align-items: center;
     margin-bottom: 0.3rem;
+
+    @media @mobile {
+        margin-bottom: 0.8rem;
+    }
 }
 
 .progress-bar__title {
@@ -17,12 +21,24 @@
 
 .progress-bar__right {
     padding-left: 1.2rem;
+
+    @media @mobile {
+        padding-left: .2rem;
+    }
 }
 
 .progress-bar__bar {
     width: 139px;
     height: 6px;
     background-color: #efefef;
+
+    @media @tablet {
+        width: 100px;
+    }
+
+    @media @mobile {
+        width: 50px;
+    }
 }
 
 .progress-bar__progress {

@@ -20,6 +20,10 @@
         z-index: 1;
 
     }
+
+    @media @tablet {
+        max-width: 575px;
+    }
 }
 
 .timeline__col {
@@ -28,11 +32,21 @@
     &--left {
         text-align: right;
         padding-right: 3.2rem;
+
+        @media @mobile {
+            padding-right: 1.2rem;
+        }
     }
 
     &--right {
         padding-left: 3.2rem;
+
+        @media @mobile {
+            padding-left: 1.2rem;
+        }
     }
+
+    
 }
 
 .timeline__title {

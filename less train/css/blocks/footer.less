@@ -7,6 +7,7 @@
 
 .footer__inner {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
 }
@@ -14,6 +15,12 @@
 .footer__credits {
     display: flex;
     align-items: center;
+
+    @media @tablet {
+       width: 100%;
+       justify-content: center;
+       margin-bottom: 1rem;
+    }
 }
 
 .footer__copyright {
@@ -35,8 +42,16 @@
 }
 
 .footer__nav {
+    display: flex;
+    
     font-size: .94rem;
     align-items: center;
+
+    @media @tablet {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+     }
 }
 
 .footer__nav-link {
@@ -60,5 +75,9 @@
             border-color: #bbbbcc;
             color: @black;
         }
+    }
+
+    @media @tablet {
+        margin: 0 .5rem .5rem;
     }
 }

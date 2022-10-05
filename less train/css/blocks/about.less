@@ -2,10 +2,15 @@
 
 .about {
     margin: 8.4rem 0;
+
+    @media @tablet {
+        margin: 4rem 0;
+     }
 }
 
 .about__inner {
     display: flex;
+    flex-wrap: wrap;
     max-width: 1090px;
 }
 
@@ -28,6 +33,15 @@
         left: 8rem;
         bottom: 0;
         z-index: 1;
+
+        @media @desktop {
+           display: none;
+        } 
+    }
+
+    @media @tablet {
+        width: 100%;
+        order: 2;
     }
 }
 
@@ -35,6 +49,12 @@
     width: 50%;
     padding-left: 3rem;
     margin-top: 2rem;
+
+    @media @tablet {
+        width: 100%;
+        order: 1;
+        padding-left: 0;
+     }
 }
 
 .about__title {
@@ -42,6 +62,10 @@
     font-size: 3rem;
     color: @black;
     text-transform: uppercase;
+
+    @media @desktop {
+        font-size: 2rem;
+     }
 }
 
 .about__bigtitle {
@@ -53,6 +77,10 @@
     color: fade(@black, 10%);
     text-transform: uppercase;
     margin-bottom: 1.4rem;
+
+    @media @desktop {
+        font-size: 4rem;
+     }
 }
 
 .about__text {

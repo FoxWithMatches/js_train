@@ -1,25 +1,52 @@
 //main: ../style.less
 
+.intro {
+    @media @tablet {
+        margin-top: 100px;
+    }
+}
+
 .intro__inner {
     position: relative;
     display: flex;
     border-bottom: 1px solid fade(@gray, 30%);
-    padding-top: 100px;
-    padding-bottom: 120px;
+    padding-top: 6.6rem;
+    padding-bottom: 8rem;
+
+    @media @tablet {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
 }
 
 .intro__content {
     width: 50%;
+
+    @media @tablet {
+        width: 70%;
+}
+
+    @media @mobile {
+        width: 100%;
+}
 }
 
 .intro__suptitle {
     font-weight: 200;
     font-size: 2.13rem;
+
+    @media @tablet {
+        font-size: 2rem;
+    }
 }
 
 .intro__title {
     font-size: 3rem;
     font-weight: 700;
+
+    @media @tablet {
+        font-size: 2.5rem;
+    }
 }
 
 .intro__text {
@@ -33,6 +60,15 @@
     bottom: 0;
     right: 0;
     z-index: 1;
+
+
+    @media @tablet {
+        width: 280px;
+    }
+
+    @media @mobile {
+        display: none;
+    }
 }
 
 .intro__bg {
@@ -41,4 +77,8 @@
     right: -100px;
     z-index: -1;
     width: 800px;
+
+    @media @desktop {
+        display: none;
+    }
 }
